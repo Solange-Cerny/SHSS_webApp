@@ -20,23 +20,27 @@ class BathroomWindow(object):
 
     ##self represent the object of the class Bathroomwindow
     def open(self):
+        msg = ""
+
         if self.windowClosed:
-            print("Opening bathroom window...")
-            time.sleep(2)
-            print("Window openned.")
+            msg += "Opening bathroom window...<br><br>"
+            msg += "Window openned.<br><br>"
 
             ##setting window state
             self.windowClosed = False
         else:
-            print("Bathroom window has already been openned.")
-
-
+            msg += "Bathroom window has already been openned.<br><br>"
+            
+        return msg
 
     def close(self):
+        msg = ""
+
         if self.windowClosed:
-            print("Bathroom window has already been closed.")
+            msg += "Bathroom window has already been closed.<br><br>"
         else:
-            print("Closing bathroom window...")
-            time.sleep(2)
-            print("Window closed.")
+            msg += "Closing bathroom window...<br><br>"
+            msg += "Window closed.<br><br>"
             self.windowClosed = True
+
+        return msg

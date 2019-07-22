@@ -20,23 +20,27 @@ class SolarPanels(object):
 
     ##self represent the object of the class LivingRoomWindow
     def deActivate(self):
+        msg = ""
+        
         if self.panelsActive:
-            print("De-activating solar panels...")
-            time.sleep(1)
-            print("Solar panels de-activated.")
+            msg += "De-activating solar panels...<br><br>"
+            msg += "Solar panels de-activated.<br><br>"
 
             ##setting window state
             self.panelsActive = False
         else:
-            print("Solar panels have already been de-activated.")
+            msg += "Solar panels have already been de-activated.<br><br>"
 
-
+        return msg
 
     def activate(self):
+        msg = ""
+        
         if self.panelsActive:
-            print("Solar panels have already been activated.")
+           msg += "Solar panels have already been activated.<br><br>"
         else:
-            print("Activating solar panels...")
-            time.sleep(1)
-            print("Solar panels activated.")
+            msg += "Activating solar panels...<br><br>"
+            msg += "Solar panels activated.<br><br>"
             self.panelsActive = True
+
+        return msg

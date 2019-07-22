@@ -10,7 +10,7 @@
 #-------------------------------------------------------------------------------
 #!/usr/bin/env python
 
-def processOpening():
-    print("processGarageOpening")
-    print("                  ")
-    print("                  ")
+class GarageDoor():
+
+    def processOpening(self):
+        return "processGarageOpening"

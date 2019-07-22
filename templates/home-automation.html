@@ -1,0 +1,101 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<h1>{{title}}</h1>
+
+<table class="table table-hover">
+    <tbody>
+        <tr>
+            <td>
+                Solar Panels
+            </td>
+            <td>
+                <form action="activatepanels" method="GET">
+                    <button class="btn btn-primary" type="submit">Activate</button>
+                </form>
+            </td>
+            <td>
+                <form action="deactivatepanels" method="GET">
+                    <button class="btn btn-primary" type="submit">DeActivate</button>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Bathroom Windows
+            </td>
+            <td>
+                <form action="openbathromwindow" method="GET">
+                    <button class="btn btn-primary" type="submit">Open</button>
+                </form>
+            </td>
+            <td>
+                <form action="closebathromwindow" method="GET">
+                    <button class="btn btn-primary" type="submit">Close</button>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Livingroom Windows
+            </td>
+            <td>
+                <form action="openlivingroomwindows" method="GET">
+                    <button class="btn btn-primary" type="submit">Open</button>
+                </form>
+            </td>
+            <td>
+                <form action="closelivingroomwindows" method="GET">
+                    <button class="btn btn-primary" type="submit">Close</button>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Television
+            </td>
+            <td>
+                <form action="tvon" method="GET">
+                    <button class="btn btn-primary" type="submit">ON</button>
+                </form>
+            </td>
+            <td>
+                <form action="tvoff" method="GET">
+                    <button class="btn btn-primary" type="submit">OFF</button>
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Garage Door
+            </td>
+            <td>
+                <form action="opengaragedoor" method="GET">
+                    <button class="btn btn-primary" type="submit">Open</button>
+                </form>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Doctor
+            </td>
+            <td>
+                <form action="calldoctor" method="GET">
+                    <button class="btn btn-primary" type="submit">Call</button>
+                </form>
+            </td>
+            <td>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div>
+    {{ message|safe }}
+</div>
+    
+{% endblock %}
+

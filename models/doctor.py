@@ -17,17 +17,16 @@ class Doctor(object):
 
     ##self represent the object of the class LivingRoomWindow
     def call(self):
+        msg = ""
 
         ##dialing
-        print("Dialing the doctor...")
-        time.sleep(2.5)
+        msg += "Dialing the doctor...<br><br>"
         number= randint(1,7)
-        print("Please wait, you are number " + str(number)+ " in the qeue...")
-        time.sleep(3)
+        msg += "Please wait, you are number " + str(number)+ " in the qeue...<br><br>"
 
         ##conversation
-        print("Hello Dr Solange speaking, How may I help you today?")
-        response = input("Hello Dr Solange speaking, How may I help you today?")
-        print("Please wait for your diagnoses...")
-        time.sleep(2)
-        print("\nHelp is on the way with your '" + response + "' problem.")
+        msg += "Hello Dr Solange speaking, How may I help you today?<br><br>"
+        msg += "Please wait for your diagnoses...<br><br>"
+        msg += "\nHelp is on the way with your problem.<br><br>"
+
+        return msg

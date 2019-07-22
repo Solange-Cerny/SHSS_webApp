@@ -19,24 +19,28 @@ class LivingRoomWindow(object):
 
     ##self represent the object of the class LivingRoomWindow
     def open(self):
-        if self.windowClosed:
-            print("Opening living room window...")
-            time.sleep(2)
-            print("Window openned.")
+        msg = ""
 
+        if self.windowClosed:
+            msg += "Opening living room window...<br><br>"
+            msg += "Window openned.<br><br>"
+            
             ##setting window state
             self.windowClosed = False
         else:
-            print("Living room window has already been openned.")
+            msg += "Living room window has already been openned.<br><br>"
 
-
+        return msg
 
     def close(self):
+        msg = ""
+
         if self.windowClosed:
-            print("Living room window has already been closed.")
+           msg += "Living room window has already been closed.<br><br>"
         else:
-            print("Closing living room window...")
-            time.sleep(2)
-            print("Window closed.")
+            msg += "Closing living room window...<br><br>"
+            msg += "Window closed.<br><br>"
             self.windowClosed = True
+
+        return msg
 

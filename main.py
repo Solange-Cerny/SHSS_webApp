@@ -10,12 +10,12 @@
 #-------------------------------------------------------------------------------
 #!/usr/bin/env python
 
-import solarPanels
-import doctor
-import bathroomWindow
-import tv
-import livingRoomWindow
-import garageDoor
+from models.solarPanels import SolarPanels
+from models.doctor import Doctor
+from models.bathroomWindow import BathroomWindow
+from models.tv import Tv
+from models.livingRoomWindow import LivingRoomWindow
+from models.garageDoor import processOpening
 import sys
 import time
 
@@ -26,11 +26,11 @@ def quit():
 
 def main():
     ##Objects' intantiation
-    bw = bathroomWindow.BathroomWindow()
-    lw = livingRoomWindow.LivingRoomWindow()
-    sp = solarPanels.SolarPanels()
-    television = tv.Tv()
-    dr = doctor.Doctor()
+    bw = BathroomWindow()
+    lw = LivingRoomWindow()
+    sp = SolarPanels()
+    television = Tv()
+    dr = Doctor()
 
     options = { "1"      :   sp.activate,
                 "2"      :   sp.deActivate,
@@ -41,7 +41,7 @@ def main():
                 "7"      :   television.off,
                 "8"      :   lw.open,
                 "9"      :   lw.close,
-                "10"     :   garageDoor.processOpening,
+                "10"     :   processOpening,
                 "q"      :   quit,
               }
 
@@ -61,7 +61,7 @@ def main():
         print("7           Tv off - living room")
         print("8           Open Windows - living room")
         print("9           Close windows - living room")
-        print("1           A car arriving at the garage door")
+        print("10           A car arriving at the garage door")
         print("q           Quit")
         print("")
         userInput = input("Please enter menu option: ")

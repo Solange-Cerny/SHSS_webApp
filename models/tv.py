@@ -20,23 +20,27 @@ class Tv(object):
 
     ##self represent the object of the class LivingRoomWindow
     def off(self):
+        msg = ""
+        
         if self.tvOn:
-            print("Switching tv off...")
-            time.sleep(1)
-            print("Tv is off.")
+            msg += "Switching tv off...<br><br>"
+            msg += "Tv is off.<br><br>"
 
             ##setting window state
             self.tvOn = False
         else:
-            print("Tv has already been Switched off.")
+            msg += "Tv has already been Switched off.<br><br>"
 
-
+        return msg
 
     def on(self):
+        msg = ""
+        
         if self.tvOn:
-            print("Tv has already been Switched on.")
+            msg += "Tv has already been Switched on.<br><br>"
         else:
-            print("Switching tv on....")
-            time.sleep(1)
-            print("Tv is on.")
+            msg += "Switching tv on....<br><br>"
+            msg += "Tv is on.<br><br>"
             self.tvOn = True
+
+        return msg
